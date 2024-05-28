@@ -1,0 +1,113 @@
+.seat-map-container {
+  background-color: black; /* Black background */
+  color: white;          /* White text color */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+body {
+  background-color: black;
+}
+.screen {
+  background-color: #333; /* Dark gray stage */
+  color: white;
+  padding: 10px 20px; /* Increased padding for the "STAGE" label */
+  margin-bottom: 20px;
+  width: 100%;
+  text-align: center;
+  font-size: 18px;  /* Larger font for "STAGE" */
+}
+
+.seat-map {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+ 
+}
+.row-container {
+  display: flex; /* Make row-container a flex container */
+  align-items: center; /* Align row label and seats vertically */
+}
+
+.row-label {
+  width: 30px;    /* Adjust width as needed */
+  margin-right: 10px;  /* Add some space between label and seats */
+  text-align: center; /* Center the label text */
+  font-weight: bold;
+  color: white;
+}
+.row-end{
+  text-align: end;
+}
+.seat {
+  width: 30px;
+  height: 30px;
+  border: 1px solid white;  
+  margin: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+  font-weight: bold;
+  color: rgb(250, 248, 248); /* Seat number color (black) */
+}
+
+.seat.empty {
+  width: 30px;
+  height: 30px;
+  margin: 5px;
+  visibility: hidden; /* Hide empty seats */
+}
+
+.seat.available {
+  background-color: transparent; /* Transparent background for available seats */
+}
+
+.seat.booked {
+  background-color: #6c757d; /* Gray for booked seats */
+  cursor: not-allowed;
+}
+
+.seat.selected {
+  background-color: #f6f4f2; 
+  color: black; /* Orange for selected seats */
+}
+
+.legend {
+  margin-top: 20px;
+}
+
+.legend .seat {
+  display: inline-block;
+  margin-right: 5px;
+}
+
+
+.seat-map-container h2 {
+  margin-top: 20px;
+  font-size: 18px;  /* Make the "Selected Seats" heading larger */
+}
+
+.seat-map-container ul {
+  list-style: none; /* Remove default list item markers */
+  padding: 0;     
+  margin: 0;
+}
+
+.seat-map-container li {
+  display: inline-block;  
+  margin-right: 10px;  
+  padding: 5px 10px;   
+  background-color: #f0da4e; /* Orange background for selected seats */
+  color: rgb(9, 9, 9);          
+  border-radius: 5px;       
+}
